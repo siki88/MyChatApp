@@ -24,13 +24,22 @@ class NameViewController: UIViewController {
       // print("Hello world")
       // self.view.backgroundColor = UIColor.red //pozadi obrazovky
      checkInput()
-    
+     vzhled()
+  
     }
     
-      // toto se spusti az pri zobrazovani obrazovky
+    // MARK: VZHLED
+    func vzhled(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+    }
+    
+    // toto se spusti az pri zobrazovani obrazovky
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("zobrazeno")
+        //print("zobrazeno")
     }
 
     
@@ -41,9 +50,22 @@ class NameViewController: UIViewController {
     }
    */
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    
     // MARK: - Function
-    @IBAction func startAction(){
-        print("klik")
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { //tato funkce se zavolá kdyz se posouváme jinam
+        super.prepare(for: segue, sender: sender)
+        
+        txtName.resignFirstResponder() //schovám klávesnici
+        
+        if let destination = segue.destination as? ChatViewController, let userName = txtName.text {
+            let user = User(name:userName)
+            destination.me = user
+        }
     }
     
     @IBAction func akceKlavesnice(){
