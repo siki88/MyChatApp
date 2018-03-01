@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UITextFieldDelegate {
+class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource {
 
     // MARK: data
     var me: User!
     
-    var message = [Message]()
+    var messages = [Message]()
     
     // MARK: Outlets
     @IBOutlet weak var txtMessage: UITextField!
@@ -25,9 +25,8 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     //print(me.name)
         self.title = me.name
-        
-        
-        
+       
+    testData()
        
     }
     
@@ -52,9 +51,30 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     func testData(){
         let message1 = Message(text:"ahoj",sender:User(name:"Petr"))
         let message2 = Message(text:"nazdar",sender:User(name:"Pepa"))
-        message = [message1, message2]
+        messages = [message1, message2]
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    // MARK: TableView
+    
+
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageTableViewCell", for: indexPath) as! MessageTableViewCell
+        let message = messages[indexPath.row]
+        cell.lblName.text = message.sender.name
+        cell.lblText.text = message.text
+        return cell
+    }
+    
+    
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+
     
     deinit {
         //vymazani objektu z paměti

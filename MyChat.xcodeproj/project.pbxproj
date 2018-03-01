@@ -24,6 +24,8 @@
 		E991E45120482E4900432E56 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E44F20482E4900432E56 /* ChatViewController.swift */; };
 		E991E4532048436900432E56 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E4522048436900432E56 /* Message.swift */; };
 		E991E4542048436900432E56 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E4522048436900432E56 /* Message.swift */; };
+		E991E45620484D4A00432E56 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E45520484D4A00432E56 /* MessageTableViewCell.swift */; };
+		E991E45720484D4A00432E56 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E45520484D4A00432E56 /* MessageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 		E991E44D20482C1300432E56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E991E44F20482E4900432E56 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E991E4522048436900432E56 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E991E45520484D4A00432E56 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,7 @@
 		E991E44B20480BD000432E56 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E991E45520484D4A00432E56 /* MessageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +349,7 @@
 			files = (
 				E991E402204803B200432E56 /* NameViewController.swift in Sources */,
 				E991E400204803B200432E56 /* AppDelegate.swift in Sources */,
+				E991E45620484D4A00432E56 /* MessageTableViewCell.swift in Sources */,
 				E991E4532048436900432E56 /* Message.swift in Sources */,
 				E991E45020482E4900432E56 /* ChatViewController.swift in Sources */,
 				E991E44E20482C1300432E56 /* User.swift in Sources */,
@@ -371,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E991E45720484D4A00432E56 /* MessageTableViewCell.swift in Sources */,
 				E991E43D20480A8100432E56 /* NameViewController.swift in Sources */,
 				E991E4542048436900432E56 /* Message.swift in Sources */,
 				E991E45120482E4900432E56 /* ChatViewController.swift in Sources */,

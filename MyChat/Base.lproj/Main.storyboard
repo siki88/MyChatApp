@@ -120,9 +120,51 @@
                                     <action selector="sendMessage:" destination="Wv9-Yl-4tK" eventType="touchUpInside" id="42d-7v-Wh2"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P39-ep-SPI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P39-ep-SPI">
                                 <rect key="frame" x="0.0" y="134" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageTableViewCell" id="1f1-jf-g9l" customClass="MessageTableViewCell" customModule="MyChat_Dev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1f1-jf-g9l" id="Ecq-Kd-ABY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pepa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-xo-MEb" userLabel="name">
+                                                    <rect key="frame" x="20" y="11" width="38.5" height="21"/>
+                                                    <color key="backgroundColor" red="0.76622062189009821" green="0.99971002340316772" blue="0.92428887923343606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="700" text="Ahoj Láďo. Lorem ipsum doloro, Lorem ipsum doloro,Lorem ipsum doloro," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yk-mW-qwG" userLabel="text">
+                                                    <rect key="frame" x="78.5" y="11" width="276.5" height="21"/>
+                                                    <color key="backgroundColor" red="0.75028989762082365" green="0.99971002340316772" blue="0.89005189241763205" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Yk-mW-qwG" firstAttribute="leading" secondItem="n9f-xo-MEb" secondAttribute="trailing" constant="20" id="LxQ-2f-dbx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="n9f-xo-MEb" firstAttribute="top" secondItem="1f1-jf-g9l" secondAttribute="top" constant="11" id="7gm-OP-hMV"/>
+                                            <constraint firstItem="n9f-xo-MEb" firstAttribute="leading" secondItem="1f1-jf-g9l" secondAttribute="leading" constant="20" id="GsV-Ta-tU6"/>
+                                            <constraint firstItem="6Yk-mW-qwG" firstAttribute="top" secondItem="1f1-jf-g9l" secondAttribute="top" constant="11" id="Rpj-pl-90z"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Yk-mW-qwG" secondAttribute="trailing" constant="20" id="TIu-QX-kNu"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="lblName" destination="n9f-xo-MEb" id="WCa-vU-ku1"/>
+                                            <outlet property="lblText" destination="6Yk-mW-qwG" id="9zW-OD-U3P"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wv9-Yl-4tK" id="U6Y-Xr-tbi"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.33808636665344238" green="0.99971002340316772" blue="0.5256231427192688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mru-Av-9OG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="27"/>
+            <point key="canvasLocation" x="957.60000000000002" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>
