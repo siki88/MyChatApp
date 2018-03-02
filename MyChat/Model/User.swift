@@ -15,4 +15,16 @@ class User {
     init(name:String){
         self.name = name
     }
+    
+    
+    init?(json: [String:Any]){
+        if let senderName = json["name"] as? String {
+            self.name = senderName
+            
+        }else{
+            return nil
+        }
+    }
+    
+    
 }

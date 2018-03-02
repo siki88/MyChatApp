@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, DataManagerDelegate{
+class ChatViewController: MyViewController, UITextFieldDelegate, UITableViewDataSource, DataManagerDelegate{
+    
+  
+    
 
     // MARK: data
     var me: User!
@@ -20,6 +23,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewData
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bottomTableViewConsztraint: NSLayoutConstraint!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     
@@ -29,15 +33,30 @@ class ChatViewController: UIViewController, UITextFieldDelegate, UITableViewData
         self.dataManager = DataManager()
         self.dataManager.delegate = self
         self.title = me.name
-       
+        
+     //  applyApperance()
    // testData()
+        
+        activityIndicator.color = .green
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: Notification.Name.UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: Notification.Name.UIKeyboardWillShow, object: nil)
        
+        
+        
+        activityIndicator.startAnimating()
+        dataManager.getDataFromAPI()
+       // sleep(2)
+      //  activityIndicator.stopAnimating()
+        
     }
     
     // MARK: Functions
+    
+    func dataManagerDidFailWithError(_ error: Error) {
+        activityIndicator.stopAnimating()
+        printError(error)
+    }
     
     @IBAction func sendMessage() {
         if let text = txtMessage.text, !text.isEmpty  {

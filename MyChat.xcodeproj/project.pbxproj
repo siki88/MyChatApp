@@ -12,6 +12,8 @@
 		E9467A0F204946B100AB0969 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9467A0D204946B100AB0969 /* DataManager.swift */; };
 		E9467A112049580600AB0969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9467A102049580600AB0969 /* GoogleService-Info.plist */; };
 		E9467A122049580600AB0969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9467A102049580600AB0969 /* GoogleService-Info.plist */; };
+		E9650D13204986A6001E9488 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9650D12204986A6001E9488 /* MyViewController.swift */; };
+		E9650D14204986A6001E9488 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9650D12204986A6001E9488 /* MyViewController.swift */; };
 		E991E400204803B200432E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E3FF204803B200432E56 /* AppDelegate.swift */; };
 		E991E402204803B200432E56 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E401204803B200432E56 /* NameViewController.swift */; };
 		E991E405204803B200432E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E991E403204803B200432E56 /* Main.storyboard */; };
@@ -60,6 +62,7 @@
 		E8AB205048DBC3B0F8D1B131 /* Pods-MyChat Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChat Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyChat Dev/Pods-MyChat Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		E9467A0D204946B100AB0969 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E9467A102049580600AB0969 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E9650D12204986A6001E9488 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		E991E3FC204803B200432E56 /* MyChat Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyChat Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E991E3FF204803B200432E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E991E401204803B200432E56 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +229,7 @@
 			children = (
 				E991E401204803B200432E56 /* NameViewController.swift */,
 				E991E44F20482E4900432E56 /* ChatViewController.swift */,
+				E9650D12204986A6001E9488 /* MyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,12 +425,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyChat Dev/Pods-MyChat Dev-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -494,12 +500,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyChat Live/Pods-MyChat Live-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -522,6 +530,7 @@
 				E9467A0E204946B100AB0969 /* DataManager.swift in Sources */,
 				E991E4532048436900432E56 /* Message.swift in Sources */,
 				E991E45020482E4900432E56 /* ChatViewController.swift in Sources */,
+				E9650D13204986A6001E9488 /* MyViewController.swift in Sources */,
 				E991E44E20482C1300432E56 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +558,7 @@
 				E991E45720484D4A00432E56 /* MessageTableViewCell.swift in Sources */,
 				E9467A0F204946B100AB0969 /* DataManager.swift in Sources */,
 				E991E43D20480A8100432E56 /* NameViewController.swift in Sources */,
+				E9650D14204986A6001E9488 /* MyViewController.swift in Sources */,
 				E991E4542048436900432E56 /* Message.swift in Sources */,
 				E991E45120482E4900432E56 /* ChatViewController.swift in Sources */,
 				E991E43E20480A8100432E56 /* AppDelegate.swift in Sources */,

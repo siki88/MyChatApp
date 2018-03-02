@@ -166,22 +166,28 @@
                                     <outlet property="dataSource" destination="Wv9-Yl-4tK" id="U6Y-Xr-tbi"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Caw-cC-veg" userLabel="Activity Indicator">
+                                <rect key="frame" x="169.5" y="347.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.33808636665344238" green="0.99971002340316772" blue="0.5256231427192688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3ha-m1-1Dj" firstAttribute="bottom" secondItem="P39-ep-SPI" secondAttribute="bottom" id="64D-h7-LLm"/>
                             <constraint firstItem="G51-ZL-gnf" firstAttribute="top" secondItem="3ha-m1-1Dj" secondAttribute="top" constant="20" id="7Js-MB-kCC"/>
                             <constraint firstItem="P39-ep-SPI" firstAttribute="leading" secondItem="3ha-m1-1Dj" secondAttribute="leading" id="Pe9-l5-W3h"/>
+                            <constraint firstItem="Caw-cC-veg" firstAttribute="centerX" secondItem="3ha-m1-1Dj" secondAttribute="centerX" id="Xi9-Is-2l6"/>
                             <constraint firstItem="bSY-LA-QFU" firstAttribute="leading" secondItem="G51-ZL-gnf" secondAttribute="trailing" constant="10" id="Xj3-gE-v3P"/>
                             <constraint firstItem="G51-ZL-gnf" firstAttribute="leading" secondItem="3ha-m1-1Dj" secondAttribute="leading" constant="20" id="fns-ht-0MB"/>
                             <constraint firstItem="3ha-m1-1Dj" firstAttribute="trailing" secondItem="P39-ep-SPI" secondAttribute="trailing" id="ibM-ns-NQa"/>
                             <constraint firstItem="3ha-m1-1Dj" firstAttribute="trailing" secondItem="bSY-LA-QFU" secondAttribute="trailing" constant="20" id="kN6-DJ-RZS"/>
                             <constraint firstItem="P39-ep-SPI" firstAttribute="top" secondItem="bSY-LA-QFU" secondAttribute="bottom" constant="20" id="xWn-XX-Uz3"/>
                             <constraint firstItem="bSY-LA-QFU" firstAttribute="top" secondItem="3ha-m1-1Dj" secondAttribute="top" constant="20" id="y9g-rG-gJo"/>
+                            <constraint firstItem="Caw-cC-veg" firstAttribute="centerY" secondItem="3ha-m1-1Dj" secondAttribute="centerY" id="z1g-dN-NJ9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3ha-m1-1Dj"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Caw-cC-veg" id="Jlw-rs-mT3"/>
                         <outlet property="bottomTableViewConsztraint" destination="64D-h7-LLm" id="LUG-eU-VCL"/>
                         <outlet property="btnSend" destination="bSY-LA-QFU" id="G6s-gs-GXD"/>
                         <outlet property="tableView" destination="P39-ep-SPI" id="vZ0-KM-ROS"/>

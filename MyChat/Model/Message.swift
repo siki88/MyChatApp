@@ -24,5 +24,16 @@ class Message{
         self.text = text
         self.sender = sender
     }
-    
+   
+    init?(json: [String:Any]){
+        if let messageText = json["text"] as? String,
+        let senderJson = json["sender"] as? [String:Any],
+            let sender = User(json: senderJson){
+            self.text = messageText
+            self.sender = sender
+        }else{
+            return nil
+        }
+    }
+ 
 }
