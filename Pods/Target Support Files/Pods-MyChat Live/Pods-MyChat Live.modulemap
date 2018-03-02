@@ -1,0 +1,6 @@
+framework module Pods_MyChat_Live {
+  umbrella header "Pods-MyChat Live-umbrella.h"
+
+  export *
+  module * { export * }
+}

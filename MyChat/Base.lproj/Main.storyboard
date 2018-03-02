@@ -117,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="SEND"/>
                                 <connections>
-                                    <action selector="sendMessage:" destination="Wv9-Yl-4tK" eventType="touchUpInside" id="42d-7v-Wh2"/>
+                                    <action selector="sendMessage" destination="Wv9-Yl-4tK" eventType="touchUpInside" id="T85-ks-oe2"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="P39-ep-SPI">
@@ -182,6 +182,7 @@
                         <viewLayoutGuide key="safeArea" id="3ha-m1-1Dj"/>
                     </view>
                     <connections>
+                        <outlet property="bottomTableViewConsztraint" destination="64D-h7-LLm" id="LUG-eU-VCL"/>
                         <outlet property="btnSend" destination="bSY-LA-QFU" id="G6s-gs-GXD"/>
                         <outlet property="tableView" destination="P39-ep-SPI" id="vZ0-KM-ROS"/>
                         <outlet property="txtMessage" destination="G51-ZL-gnf" id="sjV-TG-FQC"/>

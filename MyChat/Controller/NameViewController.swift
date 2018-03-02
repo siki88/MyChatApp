@@ -18,13 +18,12 @@ class NameViewController: UIViewController {
     // MARK: - Init     toto se spusti okamzite
     override func viewDidLoad() {
         super.viewDidLoad()
-      // Do any additional setup after loading the view, typically from a nib.
-      // hello.text = "VÍTEJTE"
-      // txtName.text = "BLE BLE"
-      // print("Hello world")
-      // self.view.backgroundColor = UIColor.red //pozadi obrazovky
-     checkInput()
+
      vzhled()
+     loadMyName()
+     checkInput()
+        
+
   
     }
     
@@ -65,6 +64,7 @@ class NameViewController: UIViewController {
         if let destination = segue.destination as? ChatViewController, let userName = txtName.text {
             let user = User(name:userName)
             destination.me = user
+            saveMyName(userName)
         }
     }
     
@@ -79,6 +79,20 @@ class NameViewController: UIViewController {
         }else{
             btnStart.isUserInteractionEnabled = false
         }
+    }
+    
+    //MARK : storage - ulozeni dat do aplikace
+    
+    let userNameConstant = "MyName"
+    
+    func loadMyName(){ // ulozeni mého jmena
+        if let myName = UserDefaults.standard.object(forKey: userNameConstant) as? String {
+            txtName.text = myName
+        }
+    }
+    
+    func saveMyName(_ name: String){ // ulozeni mého jmena
+            UserDefaults.standard.set(name, forKey: "MyName")
     }
     
 
