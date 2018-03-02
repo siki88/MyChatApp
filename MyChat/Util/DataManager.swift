@@ -7,6 +7,7 @@
 //  DataManager propojuje komunikaci mezi chatviewcontroller a databazi
 
 import Foundation
+import FirebaseDatabase
 
 protocol DataManagerDelegate:NSObjectProtocol{
     //definice funkce ktera bude posilat data zpět když dojde ke změně
@@ -22,14 +23,14 @@ class DataManager{
     init() {
       //  delegate?.dataManagerDidReceiveNewData(self)
         
+        
     }
     
 
-    
     func sendMessage(_ message: Message){
-        messages.insert(message, at: 0)
-        delegate?.dataManagerDidReceiveNewData(self)
+      //  messages.insert(message, at: 0)
+      //  delegate?.dataManagerDidReceiveNewData(self)
+        let trigger = Database.database().reference(withPath:"Messages").childByAutoId()
+        trigger.setValue(message.dictionaryValue)
     }
-
-    
 }

@@ -10,6 +10,8 @@
 		7FADE79B3AE3D70914196634 /* Pods_MyChat_Live.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B297B5E9811D0B00432BA3 /* Pods_MyChat_Live.framework */; };
 		E9467A0E204946B100AB0969 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9467A0D204946B100AB0969 /* DataManager.swift */; };
 		E9467A0F204946B100AB0969 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9467A0D204946B100AB0969 /* DataManager.swift */; };
+		E9467A112049580600AB0969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9467A102049580600AB0969 /* GoogleService-Info.plist */; };
+		E9467A122049580600AB0969 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9467A102049580600AB0969 /* GoogleService-Info.plist */; };
 		E991E400204803B200432E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E3FF204803B200432E56 /* AppDelegate.swift */; };
 		E991E402204803B200432E56 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E991E401204803B200432E56 /* NameViewController.swift */; };
 		E991E405204803B200432E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E991E403204803B200432E56 /* Main.storyboard */; };
@@ -57,6 +59,7 @@
 		C1F11AD80A3B5A035AA19710 /* Pods_MyChat_Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyChat_Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AB205048DBC3B0F8D1B131 /* Pods-MyChat Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyChat Dev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyChat Dev/Pods-MyChat Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		E9467A0D204946B100AB0969 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E9467A102049580600AB0969 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E991E3FC204803B200432E56 /* MyChat Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyChat Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E991E3FF204803B200432E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E991E401204803B200432E56 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 				E991E406204803B200432E56 /* Assets.xcassets */,
 				E991E408204803B200432E56 /* LaunchScreen.storyboard */,
 				E991E40B204803B200432E56 /* Info.plist */,
+				E9467A102049580600AB0969 /* GoogleService-Info.plist */,
 			);
 			path = MyChat;
 			sourceTree = "<group>";
@@ -361,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E991E40A204803B200432E56 /* LaunchScreen.storyboard in Resources */,
+				E9467A112049580600AB0969 /* GoogleService-Info.plist in Resources */,
 				E991E407204803B200432E56 /* Assets.xcassets in Resources */,
 				E991E405204803B200432E56 /* Main.storyboard in Resources */,
 			);
@@ -385,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E991E44120480A8100432E56 /* LaunchScreen.storyboard in Resources */,
+				E9467A122049580600AB0969 /* GoogleService-Info.plist in Resources */,
 				E991E44220480A8100432E56 /* Assets.xcassets in Resources */,
 				E991E44320480A8100432E56 /* Main.storyboard in Resources */,
 			);
@@ -700,7 +706,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MPB.MyChat.Dev;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.MyChat.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -716,7 +722,7 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = MPB.MyChat.Dev;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.MyChat.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
